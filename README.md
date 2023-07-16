@@ -31,6 +31,7 @@ Here's a simple example that demonstrates the usage of the Mathematic class libr
 
 csharp
 Copy code
+```csharp
 using System;
 using Mathematic;
 
@@ -51,6 +52,7 @@ namespace YourNamespace
         }
     }
 }
+```
 In the above example, we create an instance of the Mathematic class and use its functions to perform basic mathematical operations.
 
 Conclusion

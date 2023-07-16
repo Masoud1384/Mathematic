@@ -9,21 +9,21 @@ namespace Mathematic
 {
     public class Functions
     {
-        public static bool PrimeNumber(int number)
-        {
-            if (number == 1)
-            {
-                return false;
-            }
-            for (int i = 2; i < number; i++)
-            {
-                if (number % i == 0)
-                {
-                    return false;
-                }
-            }
-            return true;
-        }
+        //public static bool PrimeNumber(int number)
+        //{
+        //    if (number < 2)
+        //    {
+        //        return false;
+        //    }
+        //    for (int i = 2; i < number; i++)
+        //    {
+        //        if (number % i == 0)
+        //        {
+        //            return false;
+        //        }
+        //    }
+        //    return true;
+        //}
         public static bool IsPair(int number)
         {
             if (number % 2 == 0)
@@ -436,6 +436,85 @@ namespace Mathematic
             var nums = numbers.Skip(2);
             sum += nums.Sum();
             return sum;
+        }
+        public static List<int> GenerateSequence(int numTerms)
+        {
+            List<int> fibonacciSequence = new List<int>();
+
+            if (numTerms >= 1)
+            {
+                fibonacciSequence.Add(0);
+            }
+
+            if (numTerms >= 2)
+            {
+                fibonacciSequence.Add(1);
+            }
+
+            if (numTerms > 2)
+            {
+                int prev = 0;
+                int current = 1;
+
+                for (int i = 3; i <= numTerms; i++)
+                {
+                    int next = prev + current;
+                    fibonacciSequence.Add(next);
+                    prev = current;
+                    current = next;
+                }
+            }
+
+            return fibonacciSequence;
+        }
+        public static int FindLargestPrimePalindrome(int limit)
+        {
+            for (int number = limit - 1; number >= 2; number--)
+            {
+                if (IsPrime(number) && IsPalindrome(number))
+                {
+                    return number;
+                }
+            }
+            return -1; // No prime palindrome found within the limit
+        }
+        public static bool IsPrime(int number)
+        {
+            if (number < 2)
+            {
+                return false;
+            }
+
+            int sqrt = (int)Math.Sqrt(number);
+            for (int i = 2; i <= sqrt; i++)
+            {
+                if (number % i == 0)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+        private static bool IsPalindrome(int number)
+        {
+            string numberString = number.ToString();
+
+            int left = 0;
+            int right = numberString.Length - 1;
+
+            while (left < right)
+            {
+                if (numberString[left] != numberString[right])
+                {
+                    return false;
+                }
+
+                left++;
+                right--;
+            }
+
+            return true;
         }
     }
 }
