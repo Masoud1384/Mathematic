@@ -9,7 +9,7 @@ namespace Mathematic
 {
     public class Functions
     {
-        public static bool primeNum(int number)
+        public static bool PrimeNumber(int number)
         {
             if (number == 1)
             {
@@ -35,7 +35,7 @@ namespace Mathematic
         {
             return number.Length;
         }
-        public static bool Kamel(int number)
+        public static bool PerfectNumber(int number)
         {
             var list = new List<int>();
             for (int i = 0; i < number; i++)
@@ -58,7 +58,7 @@ namespace Mathematic
             return false;
 
         }
-        public static int divideWithoutOperator(int number, int numberDividedTo, out int baghi)
+        public static int DivideWithoutOperator(int number, int numberDividedTo, out int rest)
         {
             int num = number;
             int count = 0;
@@ -67,7 +67,7 @@ namespace Mathematic
                 num = num - numberDividedTo;
                 count++;
             }
-            baghi = num;
+            rest = num;
             return count;
         }
         public static void ShowAllTypesOfANumber(int num)
@@ -123,7 +123,7 @@ namespace Mathematic
             }
             return false;
         }
-        public static List<int> Zarib(int number)
+        public static List<int> Coefficient(int number)
         {
             var list = new List<int>();
             for (int i = 1; i <= number * 10; i++)
@@ -135,7 +135,7 @@ namespace Mathematic
             }
             return list;
         }
-        public static int maqloob(int number)
+        public static int Reciprocal(int number)
         {
             int temp = number;
             int k = 10;
@@ -147,14 +147,14 @@ namespace Mathematic
             }
             return Convert.ToInt32(a);
         }
-        public static double GeramTooKiloo(double vaznBeGeram)
+        public static double GramTooKilo(double vaznBeGeram)
         {
             var grm = Convert.ToDouble(vaznBeGeram);
             const double kiloo = 1000;
             double thistothat = grm / kiloo;
             return thistothat;
         }
-        public static int factoriel(int number)
+        public static int Factoriel(int number)
         {
             int factorial = 1;
             for (int i = 1; i < number; i++)
@@ -198,7 +198,7 @@ namespace Mathematic
                 Console.Write(i + "\t");
             }
         }
-        public static int BMM(int first, int second)
+        public static int GCD(int first, int second)
         {
             var list = new List<int>();
             int max;
@@ -228,7 +228,7 @@ namespace Mathematic
             }
             return biggest;
         }
-        public static int KMM(int first, int second)
+        public static int LCM(int first, int second)
         {
             var list = new List<int>();
             int max;
@@ -243,8 +243,8 @@ namespace Mathematic
                 min = first;
                 max = second;
             }
-            var zaribMax = Zarib(max);
-            var zaribMin = Zarib(min);
+            var zaribMax = Coefficient(max);
+            var zaribMin = Coefficient(min);
             foreach (var item in zaribMax)
             {
                 foreach (var item2 in zaribMin)
@@ -287,7 +287,7 @@ namespace Mathematic
             }
             return sum;
         }
-        public static int reverser(int Number)
+        public static int Reverser(int Number)
         {
             var zarib = 10;
             var num = Number;
@@ -305,7 +305,7 @@ namespace Mathematic
             }
             return int.Parse(ret);
         }
-        public static int powerby(int Number, int power)
+        public static int Powerby(int Number, int power)
         {
             int num = Number;
             for (int i = 1; i < power; i++)
@@ -314,7 +314,7 @@ namespace Mathematic
             }
             return num;
         }
-        public static int round(double Number)
+        public static int Round(double Number)
         {
             int formNum = (int)Number;
             var number = Number.ToString();
@@ -327,7 +327,7 @@ namespace Mathematic
             }
             return formNum;
         }
-        public static List<int> mod(ref int mod, List<int> parameter)
+        public static List<int> Mode(ref int mod, List<int> parameter)
         {
             var list = parameter;
             var Number1 = new List<int>();
@@ -377,7 +377,7 @@ namespace Mathematic
             var result = variance / numbers.Count;
             return result;
         }
-        public static double EnherafMeyar(List<double> numbers)
+        public static double StandardDeviation(List<double> numbers)
         {
             var sum = numbers.Sum();
             var avrg = sum / numbers.Count;
@@ -418,7 +418,7 @@ namespace Mathematic
             //}
             return 0;
         }
-        public static int divWithoutDivision(int number, int divTo)
+        public static int DivWithoutDivision(int number, int divTo)
         {
             int num = number;
             int count = 0;
