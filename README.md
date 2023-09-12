@@ -46,4 +46,4 @@ namespace YourNamespace
 In the above example, we create an instance of the Mathematic class and use its functions to perform basic mathematical operations.
 
 ## Conclusion
-Congratulations! You have successfully added and used the Mathematic class library in your C# project. Explore the available functions and use them to perform various mathematical operations in your application. If you encounter any issues or have further questions, please refer to the documentation or reach out for support. Happy coding!
+Congratulations! You have successfully added and used the Mathematic class library in your C# project. Explore the available functions and use them to perform various mathematical operations in your application. If you encounter any issues or have further questions, please reach out for support. Happy coding!
