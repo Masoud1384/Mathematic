@@ -27,11 +27,11 @@ namespace Mathematic
 
             return false;
         }
-        public static int ChandRagham(string number)
+        public static int DigitLength(string number)
         {
             return number.Length;
         }
-        public static bool PerfectNumber(int number)
+        public static bool IsPerfectNumber(int number)
         {
             var list = new List<int>();
             for (int i = 0; i < number; i++)
@@ -143,7 +143,7 @@ namespace Mathematic
             }
             return Convert.ToInt32(a);
         }
-        public static double GramTooKilo(double vaznBeGeram)
+        public static double GramToKilogram(double massPerGram)
         {
             var grm = Convert.ToDouble(vaznBeGeram);
             const double kiloo = 1000;
@@ -323,7 +323,7 @@ namespace Mathematic
             }
             return formNum;
         }
-        public static List<int> Mode(ref int mod, List<int> parameter)
+        public static List<int> Mod(ref int mod, List<int> parameter)
         {
             var list = parameter;
             var Number1 = new List<int>();
@@ -356,7 +356,7 @@ namespace Mathematic
             }
             return unique;
         }
-        public static double Radical(double Num)
+        public static double Sqrt(double Num)
         {
             return Math.Pow(Num, 0.5);
         }
