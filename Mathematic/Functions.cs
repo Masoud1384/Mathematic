@@ -2,28 +2,24 @@
 using System.Collections.Generic;
 using System.Linq;
 //Big Masoud 
-//Telegram : @Masoudsh84
 //Instagram : uniquemasso
-//Github : BigMasoud22
+//Github : Masoud1384
 namespace Mathematic
 {
     public class Functions
     {
-        //public static bool PrimeNumber(int number)
-        //{
-        //    if (number < 2)
-        //    {
-        //        return false;
-        //    }
-        //    for (int i = 2; i < number; i++)
-        //    {
-        //        if (number % i == 0)
-        //        {
-        //            return false;
-        //        }
-        //    }
-        //    return true;
-        //}
+       public static bool PrimeNumber(int number)
+       {
+           if (number < 2)
+             return false;
+           
+           for (int i = 2; i < number; i++)
+           {
+               if (number % i == 0)
+                  return false;
+           }
+           return true;
+       }
         public static bool IsPair(int number)
         {
             if (number % 2 == 0)
